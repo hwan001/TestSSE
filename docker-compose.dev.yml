@@ -1,0 +1,9 @@
+# docker/docker-compose.yml
+version: "3.8"
+
+services:
+  tomcat:
+    build: .
+    ports:
+      - "8080:8080" # 접속 포트 변경 원할 경우 왼쪽 8080을 수정 (8090 등 원하는 포트로)
+    container_name: spring-tomcat # 나중에 서비스 명으로 변경하기
