@@ -1,0 +1,17 @@
+<!-- docker/server.xml -->
+<Server port="8005" shutdown="SHUTDOWN">
+    <Service name="Catalina">
+      <Connector port="8080" protocol="org.apache.coyote.http11.Http11NioProtocol"
+                 connectionTimeout="60000"
+                 keepAliveTimeout="300000"
+                 maxKeepAliveRequests="1000"
+                 compression="off"
+                 disableUploadTimeout="false"
+                 asyncTimeout="1800000" /> <!-- 30분 -->
+  
+      <Engine name="Catalina" defaultHost="localhost">
+        <Host name="localhost" appBase="webapps" unpackWARs="true" autoDeploy="true" />
+      </Engine>
+    </Service>
+  </Server>
+  
